@@ -2,7 +2,7 @@
 def part1(command_list: list[tuple[int, int]]) -> tuple[int, int]:
     horizontal: int = 0
     depth: int = 0
-    for direction, value in data:
+    for direction, value in command_list:
         match direction:
             case "forward":
                 horizontal += value
@@ -12,11 +12,11 @@ def part1(command_list: list[tuple[int, int]]) -> tuple[int, int]:
                 depth -= value
     return horizontal, depth
 
-def part2(data: list[tuple[int, int]]) -> tuple[int, int]:
+def part2(command_list: list[tuple[int, int]]) -> tuple[int, int]:
     horizontal: int = 0
     depth: int = 0
     aim: int = 0
-    for direction, value in data:
+    for direction, value in command_list:
         match direction:
             case "forward":
                 horizontal += value
